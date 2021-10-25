@@ -73,6 +73,11 @@ describe Book do
   it { should normalize_attribute(:title).from(' pick up chicks with magic tricks  ').to('Pick Up Chicks With Magic Tricks') }
   it { should normalize_attribute(:slug).from(' Social Life at the Edge of Chaos    ').to('social-life-at-the-edge-of-chaos') }
   it { should normalize_attribute(:limited_slug).from(' Social Life at the Edge of Chaos    ').to('social-life') }
+  it { should normalize_attribute(:name).from('Social Life at the Edge of Chaos').to('Social Life at...Chaos') }
+  it { should normalize_attribute(:date).from('12/12/2021 12:12').to(Date.new(2021, 12, 12, 12, 12)) }
+  it { should normalize_attribute(:integer).from('12asd').to(12) }
+  it { should normalize_attribute(:reject_blank).from(['12asd', nil, '', 12]).to(['12asd', 12]) }
+  it { should normalize_attribute(:url).from('google.com/qwe?first=1&first=2').to('http://google.com/qwe?first=2') }
 end</code></pre>
 
 p. The following normalizers are already included with the +0.3 version of the gem.

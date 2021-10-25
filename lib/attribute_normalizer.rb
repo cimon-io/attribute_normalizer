@@ -33,13 +33,18 @@ module AttributeNormalizer
     def initialize
 
       @normalizers = {
-        :blank         => AttributeNormalizer::Normalizers::BlankNormalizer,
-        :phone         => AttributeNormalizer::Normalizers::PhoneNormalizer,
-        :squish        => AttributeNormalizer::Normalizers::SquishNormalizer,
-        :strip         => AttributeNormalizer::Normalizers::StripNormalizer,
-        :whitespace    => AttributeNormalizer::Normalizers::WhitespaceNormalizer,
-        :boolean       => AttributeNormalizer::Normalizers::BooleanNormalizer,
-        :control_chars => AttributeNormalizer::Normalizers::ControlCharsNormalizer
+        :blank                => AttributeNormalizer::Normalizers::BlankNormalizer,
+        :phone                => AttributeNormalizer::Normalizers::PhoneNormalizer,
+        :squish               => AttributeNormalizer::Normalizers::SquishNormalizer,
+        :strip                => AttributeNormalizer::Normalizers::StripNormalizer,
+        :whitespace           => AttributeNormalizer::Normalizers::WhitespaceNormalizer,
+        :boolean              => AttributeNormalizer::Normalizers::BooleanNormalizer,
+        :control_chars        => AttributeNormalizer::Normalizers::ControlCharsNormalizer,
+        :url                  => AttributeNormalizer::Normalizers::UrlNormalizer,
+        :date                 => AttributeNormalizer::Normalizers::DateStrNormalizer,
+        :reject_blank         => AttributeNormalizer::Normalizers::ArrayEmptyStringNormalizer,
+        :integer              => AttributeNormalizer::Normalizers::IntegerNormalizer,
+        :name                 => AttributeNormalizer::Normalizers::NameNormalizer,
       }
 
       @default_normalizers = [ :strip, :blank ]
