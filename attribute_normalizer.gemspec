@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.name         = 'attribute_normalizer'
   s.version      = AttributeNormalizer::Version
 
-  s.authors      = [ 'Michael Deering' ]
-  s.email        = [ 'mdeering@mdeering.com' ]
+  s.authors      = [ 'Michael Deering', 'Alexey Osipenko' ]
+  s.email        = [ 'mdeering@mdeering.com', 'alexey@cimon.io' ]
   s.homepage     = 'https://github.com/mdeering/attribute_normalizer'
 
   s.license      = 'MIT'
