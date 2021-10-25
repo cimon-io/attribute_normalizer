@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
 
   s.files        = Dir["{lib}/**/*"] + [ 'README.textile' ]
 
-  spec.add_dependency 'postrank-uri' # needs for UrlNormalizer
+  s.add_dependency 'postrank-uri' # needs for UrlNormalizer
 end
