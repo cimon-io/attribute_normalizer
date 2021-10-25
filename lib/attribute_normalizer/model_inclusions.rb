@@ -49,7 +49,7 @@ module AttributeNormalizer
         self.send :private, "normalize_#{attribute}"
 
         if method_defined?(:"#{attribute}=")
-          alias_method "old_#{attribute}=", "#{attribute}="
+          alias_method "old_#{attribute}=", "#{attribute}=" unless method_defined?(:"old_#{attribute}=")
 
           define_method "#{attribute}=" do |value|
             normalized_value = self.send(:"normalize_#{attribute}", value)
