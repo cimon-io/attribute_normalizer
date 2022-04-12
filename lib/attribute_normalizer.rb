@@ -1,10 +1,4 @@
-require 'attribute_normalizer/normalizers/blank_normalizer'
-require 'attribute_normalizer/normalizers/phone_normalizer'
-require 'attribute_normalizer/normalizers/strip_normalizer'
-require 'attribute_normalizer/normalizers/squish_normalizer'
-require 'attribute_normalizer/normalizers/whitespace_normalizer'
-require 'attribute_normalizer/normalizers/boolean_normalizer'
-require 'attribute_normalizer/normalizers/control_chars_normalizer'
+Dir[File.join(__dir__, 'attribute_normalizer', 'normalizers', '*.rb')].each { |file| require file }
 
 module AttributeNormalizer
 
